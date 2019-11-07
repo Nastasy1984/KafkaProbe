@@ -30,7 +30,7 @@ public class MyKafkaProducer {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
         String line;
         try {
-            while ((!(line = reader.readLine()).equals("exit"))){
+            while (!(line = reader.readLine()).equals("exit")){
                 producer.send(new ProducerRecord<String, String>(TOPIC, line));
             }
         }

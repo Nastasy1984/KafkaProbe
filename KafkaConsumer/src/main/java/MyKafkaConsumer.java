@@ -7,7 +7,7 @@ import java.util.Arrays;
 import java.util.Properties;
 
 public class MyKafkaConsumer {
-    static final String TOPIC = "probe-topic";
+    static final String TOPIC = "topic-topic";
 
     public static void main(String[] args) {
         //creating properties for consumer

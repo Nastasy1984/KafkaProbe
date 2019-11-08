@@ -17,6 +17,8 @@ public class MyKafkaConsumer {
         props.put("group.id", "myCons");
         props.put("key.deserializer", "org.apache.kafka.common.serialization.StringDeserializer");
         props.put("value.deserializer", "org.apache.kafka.common.serialization.StringDeserializer");
+		//to read previous messages
+        props.put("auto.offset.reset", "earliest");
 
         //creating consumer
         KafkaConsumer<String, String> consumer = new KafkaConsumer<>(props);
